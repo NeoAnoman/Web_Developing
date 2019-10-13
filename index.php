@@ -4,7 +4,7 @@
 	<title>Login V4</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-<!--===============================================================================================-->	
+<!--===============================================================================================-->
 	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
@@ -14,13 +14,13 @@
 	<link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
-<!--===============================================================================================-->	
+<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
-<!--===============================================================================================-->	
+<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="css/util.css">
@@ -28,33 +28,53 @@
 <!--===============================================================================================-->
 </head>
 <body>
-	
+	<?php
+
+    if(isset($_COOKIE["user"])) {
+      class loginInfo {
+      }
+      $objData = $_COOKIE['user'];
+      $obj = unserialize($objData);
+      if (!empty($obj)) {
+          $email = $obj->email;
+          $pass = $obj->pass;
+      }
+      else {
+        $email="";
+        $pass="";
+      }
+    }
+    else {
+      $email="";
+      $pass="";
+    }
+     ?>
 	<div class="limiter">
 		<div class="container-login100" style="background-image: url('images/bg-01.jpg');">
 			<div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
-				<form class="login100-form validate-form-login" id="logup">
+				<form class="login100-form validate-form-login" id="logup" method="POST" action="login.php?q=connect.php">
 					<span class="login100-form-title p-b-49">
 						Login
 					</span>
 
 					<div class="wrap-input100 validate-input m-b-23" data-validate = "Enter an username">
 						<span class="label-input100">Username</span>
-						<input class="input100" type="text" name="username" placeholder="Type your username">
+						<input class="input100" type="text" name="username" placeholder="Type your username" value="<?php echo $email; ?>">
 						<span class="focus-input100" data-symbol="&#xf206;"></span>
 					</div>
 
-					<div class="wrap-input100 validate-input" data-validate="Password is required">
+					<div class="wrap-input100 validate-input" data-validate="Password is required" value="<?php echo $pass; ?>">
 						<span class="label-input100">Password</span>
 						<input class="input100" type="password" name="lpass" placeholder="Type your password">
 						<span class="focus-input100" data-symbol="&#xf190;"></span>
 					</div>
-					
+
 					<div class="text-right p-t-8 p-b-31">
 						<a href="#">
 							Forgot password?
 						</a>
 					</div>
-					
+
 					<div class="container-login100-form-btn">
 						<div class="wrap-login100-form-btn">
 							<div class="login100-form-bgbtn"></div>
@@ -110,7 +130,7 @@
 						<input class="input100" type="text" name="email" placeholder="Enter your email">
 						<span class="focus-input100" data-symbol="&#x2709;"></span>
 					</div>
-					
+
 					<div class="wrap-input100 validate-input m-b-23" data-validate="Enter a phone number">
 						<span class="label-input100">Phone Number</span>
 						<input class="input100" type="tel" name="phone" placeholder="Type phone number">
@@ -122,7 +142,7 @@
 						<input class="radiob " type="radio" name="gender" placeholder="Male" >Male
 						<input class="radiob " type="radio" name="gender" placeholder="Female" >Female
 						<input class="radiob " type="radio" name="gender" placeholder="Other" >Other
-						
+
 					</div>
 
 					<div class="wrap-input100 validate-input m-b-23" data-validate="College name is required">
@@ -142,7 +162,7 @@
 						<input class="input100" type="password" name="cpass" placeholder="Re-enter your password">
 						<span class="focus-input100" data-symbol="&#xf190;"></span>
 					</div>
-					
+
 					<div class="container-login100-form-btn m-t-50">
 						<div class="wrap-login100-form-btn">
 							<div class="login100-form-bgbtn"></div>
@@ -166,10 +186,10 @@
 			</div>
 		</div>
 	</div>
-	
+
 
 	<div id="dropDownSelect1"></div>
-	
+
 <!--===============================================================================================-->
 	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
 <!--===============================================================================================-->
