@@ -58,14 +58,14 @@
 					</span>
 
 					<div class="wrap-input100 validate-input m-b-23" data-validate = "Enter an username">
-						<span class="label-input100">Username</span>
-						<input class="input100" type="text" name="username" placeholder="Type your username" value="<?php echo $email; ?>">
+						<span class="label-input100">Email</span>
+						<input class="input100" type="text" name="email" placeholder="Enter Your Email" value="<?php echo $email; ?>">
 						<span class="focus-input100" data-symbol="&#xf206;"></span>
 					</div>
 
-					<div class="wrap-input100 validate-input" data-validate="Password is required" value="<?php echo $pass; ?>">
+					<div class="wrap-input100 validate-input" data-validate="Password is required">
 						<span class="label-input100">Password</span>
-						<input class="input100" type="password" name="lpass" placeholder="Type your password">
+						<input class="input100" type="password" name="lpass" placeholder="Type your password" value="<?php echo $pass; ?>">
 						<span class="focus-input100" data-symbol="&#xf190;"></span>
 					</div>
 
