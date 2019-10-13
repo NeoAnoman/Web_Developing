@@ -57,7 +57,7 @@
 						Login
 					</span>
 
-					<div class="wrap-input100 validate-input m-b-23" data-validate = "Enter an username">
+					<div class="wrap-input100 validate-input m-b-23" data-validate = "Enter an email">
 						<span class="label-input100">Email</span>
 						<input class="input100" type="text" name="email" placeholder="Enter Your Email" value="<?php echo $email; ?>">
 						<span class="focus-input100" data-symbol="&#xf206;"></span>
@@ -65,7 +65,7 @@
 
 					<div class="wrap-input100 validate-input" data-validate="Password is required">
 						<span class="label-input100">Password</span>
-						<input class="input100" type="password" name="lpass" placeholder="Type your password" value="<?php echo $pass; ?>">
+						<input class="input100" type="password" name="password" placeholder="Type your password" value="<?php echo $pass; ?>">
 						<span class="focus-input100" data-symbol="&#xf190;"></span>
 					</div>
 
@@ -119,14 +119,14 @@
 						</a>
 					</div>
 				</form>
-				<form class="login100-form validate-form-signup" id="signup" >
+				<form class="login100-form validate-form-signup" id="signup" method="POST" action="sign.php?q=account.php" >
 					<span class="login100-form-title p-b-20">
 						SignUp
 					</span>
 
 					<div class="wrap-input100 validate-input m-b-23" data-validate = "Enter an username">
 						<span class="label-input100">Username</span>
-						<input class="input100" type="text" name="username" placeholder="Type your username">
+						<input class="input100" type="text" name="name" placeholder="Type your username">
 						<span class="focus-input100" data-symbol="&#xf206;"></span>
 					</div>
 
@@ -138,33 +138,33 @@
 
 					<div class="wrap-input100 validate-input m-b-23" data-validate="Enter a phone number">
 						<span class="label-input100">Phone Number</span>
-						<input class="input100" type="tel" name="phone" placeholder="Type phone number">
+						<input class="input100" type="tel" name="mob" placeholder="Type phone number">
 						<span class="focus-input100" data-symbol="&#x2706;"></span>
 					</div>
 
 					<div class="wrap-inputradio validate-input m-b-23" data-validate="Selct a gender">
 						<span class="label-input100">Gender</span><br>
-						<input class="radiob " type="radio" name="gender" placeholder="Male" >Male
-						<input class="radiob " type="radio" name="gender" placeholder="Female" >Female
-						<input class="radiob " type="radio" name="gender" placeholder="Other" >Other
+						<input class="radiob " type="radio" name="gender" placeholder="Male" value="Male" >Male
+						<input class="radiob " type="radio" name="gender" placeholder="Female" Value="Female" >Female
+						<input class="radiob " type="radio" name="gender" placeholder="Other" Value="Other" >Other
 
 					</div>
 
 					<div class="wrap-input100 validate-input m-b-23" data-validate="College name is required">
 						<span class="label-input100">College</span>
 						<input class="input100" type="text" name="college" placeholder="Type your college name">
-						<span class="focus-input100" data-symbol=" &#x2637"></span>
+						<span class="focus-input100" data-symbol= "&#x2637"></span>
 					</div>
 
 					<div class="wrap-input100 validate-input m-b-23" data-validate="Good Password is required">
 						<span class="label-input100">Password</span>
-						<input class="input100" type="password" name="spass" placeholder="Type your password">
+						<input class="input100" type="password" name="password" placeholder="Type your password">
 						<span class="focus-input100" data-symbol="&#xf190;"></span>
 					</div>
 
 					<div class="wrap-input100 validate-input m-b-23" data-validate="Password did not match">
 						<span class="label-input100">Confirm Password</span>
-						<input class="input100" type="password" name="cpass" placeholder="Re-enter your password">
+						<input class="input100" type="password" name="cpassword" placeholder="Re-enter your password">
 						<span class="focus-input100" data-symbol="&#xf190;"></span>
 					</div>
 
