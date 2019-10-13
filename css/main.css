@@ -282,69 +282,7 @@ iframe {
   position: absolute;
   height: calc(100% - 20px);
   bottom: 0;
-  left: 0;jQuery Hide/Show
-jQuery Fade
-jQuery Slide
-jQuery Animate
-jQuery stop()
-jQuery Callback
-jQuery Chaining
-
-jQuery HTML
-jQuery Get
-jQuery Set
-jQuery Add
-jQuery Remove
-jQuery CSS Classes
-jQuery css()
-jQuery Dimensions
-
-jQuery Traversing
-jQuery Traversing
-jQuery Ancestors
-jQuery Descendants
-jQuery Siblings
-jQuery Filtering
-
-jQuery AJAX
-jQuery AJAX Intro
-jQuery Load
-jQuery Get/Post
-
-jQuery Misc
-jQuery noConflict()
-jQuery Filters
-
-jQuery Examples
-jQuery Examples
-jQuery Quiz
-jQuery Exercises
-jQuery Certificate
-
-jQuery References
-jQuery Overview
-jQuery Selectors
-jQuery Events
-jQuery Effects
-jQuery HTML/CSS
-jQuery Traversing
-jQuery AJAX
-jQuery Misc
-jQuery Properties
-
-
-jQuery parent() Method
-
-Example
-
-Return the direct parent element of <span>:
-$(document).ready(function(){
-  $("span").parent().css({"color": "red", "border": "2px solid red"});
-});
-
-Result:
-body (great-great-grandparent)
-div (great-grandparent) 
+  left: 0;
   padding-left: 13px;
   padding-top: 3px;
 }
