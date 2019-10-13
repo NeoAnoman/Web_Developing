@@ -9,7 +9,7 @@
             log[0].style.display='none';
             sign[0].style.display='initial';
         });
-    
+
         $(".log-btn").on('click',function(){
             let log=$("#logup");
             let sign=$("#signup");
@@ -28,10 +28,10 @@
             else {
                 $(this).removeClass('has-val');
             }
-        })    
+        })
     })
-  
-  
+
+
     /*==================================================================
     [ Validate ]*/
     var loginput = $('.validate-form-login .input100');
@@ -61,20 +61,20 @@
 
     $('.validate-form-signup').on('submit',function(){
         let check = true;
-        
+
         let radio = $('.validate-form-signup .radiob');
-        console.log(radio);
+        //console.log(radio);
+        check=false;
          for(let i=0;i<radio.length;i++){
-            check=false;
             if(radio[i].checked)
               {
                 check=true;
-              } 
+              }
         }
         if(check==false){
-            showValidate(radio); 
+            showValidate(radio);
         }
-        
+
         for(let i=0; i<siginput.length; i++) {
             if(validate(siginput[i]) == false){
                 showValidate(siginput[i]);
@@ -96,7 +96,7 @@
            hideValidate(this);
         });
     });
-    
+
 
     function validate (input) {
         if($(input).attr('type') == 'email' || $(input).attr('name') == 'email') {
@@ -113,7 +113,7 @@
             if($(input).val().match(/^[A-Za-z\s]+$/)==null) {
                 return false;
             }
-        }        
+        }
         else if($(input).attr('type') == 'tel' || $(input).attr('name') == 'phone'){
             if($(input).val().trim().length!=10 || $(input).val().trim()==NaN) {
                 return false;
@@ -147,7 +147,7 @@
 
         $(thisAlert).removeClass('alert-validate');
     }
-    
-    
+
+
 
 })(jQuery);
