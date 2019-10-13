@@ -75,6 +75,11 @@
 						</a>
 					</div>
 
+					<div class="custom-control custom-checkbox mb-3">
+            <input type="checkbox" id="customCheck1" name="chkMe" value="PassSave">
+            <label class="custom-control-label" for="customCheck1">Remember password</label>
+          </div>
+
 					<div class="container-login100-form-btn">
 						<div class="wrap-login100-form-btn">
 							<div class="login100-form-bgbtn"></div>
