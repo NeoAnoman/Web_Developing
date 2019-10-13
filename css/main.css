@@ -145,6 +145,7 @@ iframe {
 .txt2 {
   font-family: Poppins-Regular;
   font-size: 14px;
+  font-style: bold;
   line-height: 1.5;
   color: #333333;
   text-transform: uppercase;
@@ -215,6 +216,11 @@ iframe {
   border-bottom: 2px solid #d9d9d9;
 }
 
+.wrap-inputradio {
+  width: 100%;
+  position: relative;
+}
+
 .label-input100 {
   font-family: Poppins-Regular;
   font-size: 14px;
@@ -236,6 +242,18 @@ iframe {
   padding: 0 7px 0 43px;
 }
 
+.radiob{
+  font-family: Poppins-Medium;
+  font-size: 16px;
+  color: #333333;
+  line-height: 1.2;
+
+  display: inline-block;
+  width: 10%;  
+  background: transparent;
+  padding: 0 7px 0 40px;
+  margin:7px 0;
+}
 
 /*---------------------------------------------*/
 .focus-input100 {
@@ -342,7 +360,7 @@ iframe {
   background: linear-gradient(right, #00dbde, #fc00ff, #00dbde, #fc00ff);
   top: 0;
   left: -100%;
-
+  
   -webkit-transition: all 0.4s;
   -o-transition: all 0.4s;
   -moz-transition: all 0.4s;
@@ -372,7 +390,13 @@ iframe {
   left: 0;
 }
 
+#signup{
+  display: none;
+}
 
+#logup{
+  display: initial;
+}
 /*------------------------------------------------------------------
 [ Alert validate ]*/
 
